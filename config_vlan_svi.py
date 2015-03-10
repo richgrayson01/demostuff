@@ -7,10 +7,10 @@ ip=raw_input()
 print "Enter VLAN to be configured"
 vlanId=raw_input()
 
-print "enter vlan for which svi has to be configured"
+print "Enter vlan for which svi has to be configured"
 vlansviId=raw_input()
 
-print "enter ip of the svi"
+print "Enter ip of the svi"
 ip_vlanId = raw_input()
 
 myheaders = {'content-type': 'application/json-rpc'}
@@ -29,5 +29,5 @@ payload=[
 ]
 
 response = requests.post(url,data=json.dumps(payload), headers=myheaders,auth=(username,password)).json()
-print "VLAN and SVI created"
+print "The VLAN and SVI have been created"
 
