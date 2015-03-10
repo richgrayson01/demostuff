@@ -13,7 +13,7 @@ vlansviId=raw_input()
 print "Enter ip of the svi"
 ip_vlanId = raw_input()
 
-myheaders = {'content-type': 'application/json-rpc'}
+ourheaders = {'content-type': 'application/json-rpc'}
 url = "http://"+ip+"/ins"
 username = ""
 password = ""
@@ -28,6 +28,6 @@ payload=[
   {"jsonrpc": "2.0","method": "cli","params": {"cmd": "exit","version": 1},"id": 6}
 ]
 
-response = requests.post(url,data=json.dumps(payload), headers=myheaders,auth=(username,password)).json()
+response = requests.post(url,data=json.dumps(payload), headers=ourheaders,auth=(username,password)).json()
 print "The VLAN and SVI have been created"
 
